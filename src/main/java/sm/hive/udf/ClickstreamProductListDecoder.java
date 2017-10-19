@@ -11,7 +11,7 @@ import java.util.Map;
  * Created by Sreekanth Mahesala on 7/21/16.
  */
 
-public class ProductList extends UDF {
+public class ClickstreamProductListDecoder extends UDF {
 
     public ArrayList<String> evaluate(Text input, String value ) {
 

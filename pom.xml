@@ -65,7 +65,7 @@
                     <!-- MainClass in mainfest make a executable jar -->
                     <archive>
                         <manifest>
-                            <mainClass>sm.hive.udtf.TritonNlpParser</mainClass>
+                            <mainClass>sm.hive.udtf.NlpParser</mainClass>
                         </manifest>
                     </archive>
 

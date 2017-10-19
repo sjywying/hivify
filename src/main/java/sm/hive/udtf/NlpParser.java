@@ -21,8 +21,8 @@ import java.util.*;
  */
 
 
-@Description(name = "TritonNlpParser", value = "_FUNC_(evcontent) - emits (document_sentiment, document_sentiment_score, sentences[], sentence_sentiments[], words[], tokens[], ner[], pos[]) for each row in the input")
-public class TritonNlpParser extends GenericUDTF {
+@Description(name = "NlpParser", value = "_FUNC_(evcontent) - emits (document_sentiment, document_sentiment_score, sentences[], sentence_sentiments[], words[], tokens[], ner[], pos[]) for each row in the input")
+public class NlpParser extends GenericUDTF {
 
     private PrimitiveObjectInspector evContentOI = null;
     private ListObjectInspector stopWordOI = null;
@@ -31,7 +31,7 @@ public class TritonNlpParser extends GenericUDTF {
     @Override
     public StructObjectInspector initialize(ObjectInspector[] args) throws UDFArgumentException {
 
-        String usage = "TritonNlpParser(evcontent, stopWordsArray) AS document_sentiment, document_sentiment_score, sentences, sentence_sentiments, words, tokens, ner, pos";
+        String usage = "NlpParser(evcontent, stopWordsArray) AS document_sentiment, document_sentiment_score, sentences, sentence_sentiments, words, tokens, ner, pos";
 
         if (args.length !=2) {
             throw new UDFArgumentException(usage);

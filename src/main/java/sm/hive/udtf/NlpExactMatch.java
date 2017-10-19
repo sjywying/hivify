@@ -23,8 +23,8 @@ import java.util.Properties;
  */
 
 
-@Description(name = "TritonNlpExactMatch", value = "_FUNC_(ArrayList<String> tokens, ) - emits (em_lemmas[], em_tokens[], em_token_count, em_distinct_token_count) for each row in the input")
-public class TritonNlpExactMatch extends GenericUDTF {
+@Description(name = "NlpExactMatch", value = "_FUNC_(ArrayList<String> tokens, ) - emits (em_lemmas[], em_tokens[], em_token_count, em_distinct_token_count) for each row in the input")
+public class NlpExactMatch extends GenericUDTF {
 
     private PrimitiveObjectInspector phrase = null;
     private ListObjectInspector tokens = null;
@@ -34,7 +34,7 @@ public class TritonNlpExactMatch extends GenericUDTF {
     @Override
     public StructObjectInspector initialize(ObjectInspector[] args) throws UDFArgumentException {
 
-        String usage = "TritonNlpExactMatch(tokens[], words[], phrase) AS em_phrase, em_words, em_lemmas, em_word_count, em_distinct_word_count";
+        String usage = "NlpExactMatch(tokens[], words[], phrase) AS em_phrase, em_words, em_lemmas, em_word_count, em_distinct_word_count";
 
         if (args.length !=3) {
             throw new UDFArgumentException(usage);

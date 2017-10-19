@@ -20,8 +20,8 @@ import java.util.regex.Pattern;
  */
 
 
-@Description(name = "GenericProductListParser", value = "_FUNC_(product_list,event_list) - emits (line_item, sku, units, price, product_level_coupon, bopis_units, bopis_price, bopis_oos, shipping_method, store_id, tax, shipping_cost) for each row in the input")
-public class GenericProductListParser extends GenericUDTF {
+@Description(name = "GenericClickstreamProductListParser", value = "_FUNC_(product_list,event_list) - emits (line_item, sku, units, price, product_level_coupon, bopis_units, bopis_price, bopis_oos, shipping_method, store_id, tax, shipping_cost) for each row in the input")
+public class GenericClickstreamProductListParser extends GenericUDTF {
 
     private PrimitiveObjectInspector productListOI = null;
     private PrimitiveObjectInspector eventListOI = null;
@@ -29,7 +29,7 @@ public class GenericProductListParser extends GenericUDTF {
     @Override
     public StructObjectInspector initialize(ObjectInspector[] args) throws UDFArgumentException {
 
-        String usage = "GenericProductListParser(product_list, event_list) AS line_item, sku, units, price, product_level_coupon, bopis_units, bopis_price, bopis_oos, shipping_method, store_id, tax, shipping_cost";
+        String usage = "GenericClickstreamProductListParser(product_list, event_list) AS line_item, sku, units, price, product_level_coupon, bopis_units, bopis_price, bopis_oos, shipping_method, store_id, tax, shipping_cost";
 
         if (args.length !=2) {
             throw new UDFArgumentException(usage);

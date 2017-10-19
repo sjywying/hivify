@@ -9,7 +9,7 @@ import java.util.Arrays;
  * Created by Sreekanth Mahesala on 7/21/16.
  */
 
-public class Revenue extends UDF {
+public class ClickstreamRevenueDecoder extends UDF {
 
     public double evaluate(Text productlist) {
         try{

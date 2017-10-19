@@ -1,13 +1,14 @@
+package sm.hive.udtf;
+
 import junit.framework.TestCase;
 import org.apache.hadoop.hive.ql.metadata.HiveException;
-import sm.hive.udtf.TritonNlpExactMatch;
 
 import java.util.ArrayList;
 
 /**
  * Created by Sreekanth Mahesala on 2/4/17.
  */
-public class TritonNlpExactMatchTest extends TestCase {
+public class NlpExactMatchTest extends TestCase {
 
     public void testEvaluateMethod() {
 
@@ -28,7 +29,7 @@ public class TritonNlpExactMatchTest extends TestCase {
 
         String phrase = "thank";
 
-        TritonNlpExactMatch em = new TritonNlpExactMatch();
+        NlpExactMatch em = new NlpExactMatch();
 
         Object[] record = {tokens,phrase};
         try {

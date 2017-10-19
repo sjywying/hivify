@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by Sreekanth Mahesala on 2/4/17.
  */
-public class TritonNlpParserTest extends TestCase {
+public class NlpParserTest extends TestCase {
 
     public void testEvaluateMethod() {
 
@@ -29,7 +29,7 @@ public class TritonNlpParserTest extends TestCase {
 
         String phrase = "thank";
 
-        TritonNlpParser p = new TritonNlpParser();
+        NlpParser p = new NlpParser();
 
         Object[] record = {"I need all colors for this machine.  Was wondering if there are any specials before I call another company to get it cheaper. ok I just want to make sure I buiy the right ink!  Thank you for your help :). Nope that's great thanks for your help :). ok no prob. I need to get ink for a brother mfc-j6720dw. Thank you... ok thank you. these would be for the brother  MFC-J6720DW?",tokens};
         try {
